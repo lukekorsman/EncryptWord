@@ -1,4 +1,7 @@
-﻿
+﻿// AUTHOR: Luke Korsman
+// FILENAME: Main.cs
+// DATE: 26Apr2018
+// VERSION: 1
 
 using System;
 using encryption;
@@ -35,9 +38,20 @@ class Program
 
         // Tests Encrypt function with a word less than 4 characters
         Console.WriteLine("\nThis will test calling the Encrypt function with a "
-                          + "string less than 4 characters. \nAn error message "
-                          + "should be return rather than an encrypted word.");
+                          + "string less than 4 characters. \nThe word is "
+                          + "'abc'. An error message should be return rather "
+                          + "than an encrypted word.");
         Console.WriteLine("Result: " + DriverFile.Driver.testLessThan4CharInputWord());
 
+        // Tests Encrypt function with a zero character string
+        Console.WriteLine("\nThis will test calling the Encrypt function with a "
+                          + "zero character string. \nAn error message "
+                          + "should be return rather than an encrypted word.");
+        Console.WriteLine("Result: " + DriverFile.Driver.testZeroCharInputWord());
+
+
+        // Tests guessing a shift value lower than the SHIFT
+        Console.WriteLine("Guessing a shift of 0.");
+        Console.WriteLine(DriverFile.Driver.testLowGuessValue());
     }
 }

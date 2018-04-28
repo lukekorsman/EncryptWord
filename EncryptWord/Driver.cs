@@ -1,5 +1,5 @@
 ﻿// AUTHOR: Luke Korsman
-// FILENAME: driver.cs
+// FILENAME: Driver.cs
 // DATE: 26Apr2018
 // VERSION: 1
 
@@ -10,7 +10,6 @@ namespace DriverFile
 {
     public class Driver
     {
-
         public static string testObjectInitialState()
         {
             encryption.encryptWord initialState = new encryptWord();
@@ -29,6 +28,19 @@ namespace DriverFile
         {
             encryption.encryptWord wordLength = new encryptWord();
             return wordLength.Encrypt("abc");
+        }
+
+        public static string testZeroCharInputWord()
+        {
+            encryption.encryptWord wordLength = new encryptWord();
+            return wordLength.Encrypt("");
+        }
+
+        public static string testLowGuessValue()
+        {
+            encryption.encryptWord lowGuess = new encryptWord();
+            lowGuess.GuessShiftValue(0);
+            return lowGuess.DisplayGuessStatistics();
         }
     }
 }
