@@ -10,32 +10,25 @@ namespace DriverFile
 {
     public class Driver
     {
-        public static void welcomeMessage()
-        {
-            Console.WriteLine("\nThis program tests the functionality and state changes of the "
-                    + "encryptWord class. \nEach function will start by printing a "
-                    + "message to the screen describing what \ntest is being performed. "
-                    + "Then the results of the test will be printed to the \nscreen as "
-                              + "well.\n");
-        }
-
-        public static string testEncryptEndOfAlphabet()
-        {
-            encryption.encryptWord alphabetTest = new encryptWord();
-            string testWord = "ZzXx";
-
-            return alphabetTest.Encrypt(testWord);
-        }
 
         public static string testObjectInitialState()
         {
             encryption.encryptWord initialState = new encryptWord();
             return initialState.DisplayGuessStatistics();
-
-
-            // TEST COMMENT FOR GITHUB
         }
 
-    }
+        public static string testEncryptEndOfAlphabet()
+        {
+            encryption.encryptWord alphabetTest = new encryptWord();
+            string testWord = "xxyyzz";
 
+            return alphabetTest.Encrypt(testWord);
+        }
+
+        public static string testLessThan4CharInputWord()
+        {
+            encryption.encryptWord wordLength = new encryptWord();
+            return wordLength.Encrypt("abc");
+        }
+    }
 }

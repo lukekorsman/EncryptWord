@@ -5,46 +5,39 @@ using encryption;
 
 class Program
 {
-    static void Main()
+    public static void WelcomeMessage()
     {
-        // FIXME move welcome message to main
-        DriverFile.Driver.welcomeMessage();
+        Console.WriteLine("This program tests the functionality and state changes of the "
+                + "encryptWord class. \nEach function will start by printing a "
+                + "message to the screen describing what \ntest is being performed. "
+                + "Then the results of the test will be printed to the \nscreen as "
+                          + "well.\n");
+    }
 
-
+    public static void Main()
+    {
+        WelcomeMessage();
 
         // Test object initial state
+        Console.WriteLine("This will test the EncryptWord object initial state."
+                          + " If successful, EncryptWord's \nnumberOfQueries, "
+                          + "numberOfHighGuesses, numberOfLowGuesses, and "
+                          + "sumOfGuesses should \nbe 0.");
+        Console.WriteLine(DriverFile.Driver.testObjectInitialState());
 
 
         // Test end of alphabet encrypting properly
         Console.WriteLine("\nThis will test the cipher value wrapping encryption back to the "
         + "start of the \nalphabet. For example a 'z' will be encrypted as a "
-        + "letter at the beginning \nof the lowercase alphabet. This will "
-                  + "also test uppercase letters the same way.\n");
-        Console.WriteLine("Encrypting the word: ZzXx");
+        + "letter at the beginning \nof the lowercase alphabet.\n");
+        Console.WriteLine("Encrypting the word: xxyyzz");
         Console.WriteLine("Result: " + DriverFile.Driver.testEncryptEndOfAlphabet());
 
+        // Tests Encrypt function with a word less than 4 characters
+        Console.WriteLine("\nThis will test calling the Encrypt function with a "
+                          + "string less than 4 characters. \nAn error message "
+                          + "should be return rather than an encrypted word.");
+        Console.WriteLine("Result: " + DriverFile.Driver.testLessThan4CharInputWord());
 
-
-        /*
-        encryption.encryptWord one = new encryptWord();
-        string returnWord = one.Encrypt("abcxyz");
-
-        Console.WriteLine("Original word was 'Hello', encrypted is " + returnWord);
-
-        Console.WriteLine("Guessing shift of 3; " + one.GuessShiftValue(3));
-        Console.WriteLine("Guessing shift of 1; " + one.GuessShiftValue(1));
-        Console.WriteLine("Guessing shift of 0; " + one.GuessShiftValue(0));
-        Console.WriteLine("Guessing shift of 5; " + one.GuessShiftValue(5));
-
-        Console.WriteLine("Displaying stats: " + one.DisplayGuessStatistics());
-        one.resetEncryption();
-        Console.WriteLine("RESET Displaying stats: " + one.DisplayGuessStatistics());
-
-        Console.WriteLine("Hello World!");
-        */
-
-        // Keep the console window open in debug mode.
-        //Console.WriteLine("Press any key to exit.");
-        //Console.Read();
     }
 }

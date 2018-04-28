@@ -1,0 +1,5 @@
+/Users/lukekorsman/Projects/EncryptWord/EncryptWord/bin/Debug/EncryptWord.exe
+/Users/lukekorsman/Projects/EncryptWord/EncryptWord/bin/Debug/EncryptWord.pdb
+/Users/lukekorsman/Projects/EncryptWord/EncryptWord/obj/x86/Debug/EncryptWord.csproj.CoreCompileInputs.cache
+/Users/lukekorsman/Projects/EncryptWord/EncryptWord/obj/x86/Debug/EncryptWord.exe
+/Users/lukekorsman/Projects/EncryptWord/EncryptWord/obj/x86/Debug/EncryptWord.pdb
