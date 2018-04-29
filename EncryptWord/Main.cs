@@ -28,7 +28,6 @@ class Program
                           + "sumOfGuesses should \nbe 0.");
         Console.WriteLine(DriverFile.Driver.testObjectInitialState());
 
-
         // Test end of alphabet encrypting properly
         Console.WriteLine("\nThis will test the cipher value wrapping encryption back to the "
         + "start of the \nalphabet. For example a 'z' will be encrypted as a "
@@ -50,8 +49,21 @@ class Program
         Console.WriteLine("Result: " + DriverFile.Driver.testZeroCharInputWord());
 
 
-        // Tests guessing a shift value lower than the SHIFT
-        Console.WriteLine("Guessing a shift of 0.");
+        // Tests guessing a shift value lower than the SHIFT value
+        Console.WriteLine("\nGuessing a shift of 0.");
         Console.WriteLine(DriverFile.Driver.testLowGuessValue());
+
+        // Tests guessing a shift value higher than the SHIFT value
+        Console.WriteLine("\nGuessing a shift of 4.");
+        Console.WriteLine(DriverFile.Driver.testHighGuessValue());
+
+        // Tests guessing a shift value equal to SHIFT value
+        Console.WriteLine("\nGuessing a shift of 3.");
+        Console.WriteLine(DriverFile.Driver.testCorrectGuessValue());
+
+        // Tests resetting the EncryptWord object
+        Console.WriteLine("\nTesting ResetObject function.");
+        Console.WriteLine("Guessing 3 shift values, then resetting.");
+        Console.WriteLine(DriverFile.Driver.testResetObject());
     }
 }

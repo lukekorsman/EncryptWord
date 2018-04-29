@@ -42,5 +42,29 @@ namespace DriverFile
             lowGuess.GuessShiftValue(0);
             return lowGuess.DisplayGuessStatistics();
         }
+
+        public static string testHighGuessValue()
+        {
+            encryption.encryptWord highGuess = new encryptWord();
+            highGuess.GuessShiftValue(4);
+            return highGuess.DisplayGuessStatistics();
+        }
+
+        public static string testCorrectGuessValue()
+        {
+            encryption.encryptWord correctGuess = new encryptWord();
+            correctGuess.GuessShiftValue(3);
+            return correctGuess.DisplayGuessStatistics();
+        }
+
+        public static string testResetObject()
+        {
+            encryption.encryptWord resetTest = new encryptWord();
+            resetTest.GuessShiftValue(0);
+            resetTest.GuessShiftValue(3);
+            resetTest.GuessShiftValue(5);
+            resetTest.ResetObject();
+            return resetTest.DisplayGuessStatistics();
+        }
     }
 }

@@ -169,7 +169,7 @@ namespace encryption
         // Precondition: None
         // Postcondition: numberOfQueries, numberOfHighGuesses, 
         // numberOfLowGuesses and sumOfGuess are set to 0. EncryptWord is 'off'.
-        public void resetEncryption()
+        public void ResetObject()
         {
             numberOfQueries = 0;
             numberOfHighGuesses = 0;
