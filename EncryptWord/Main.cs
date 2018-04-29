@@ -8,7 +8,7 @@
 // the console and will call the Driver.cs file to perfrom its tests.
 
 using System;
-using DriverFile;
+// using DriverFile;
 
 class Program
 {
@@ -50,19 +50,19 @@ class Program
                           + DriverFile.Driver.testZeroCharInputWord());
         
         // Tests guessing a shift value lower than the SHIFT value
-        Console.WriteLine("\nTesting a guess a shift of 0.");
+        Console.WriteLine("\nTesting a guess shift of 0.");
         Console.WriteLine(DriverFile.Driver.testLowGuessValue());
 
         // Tests guessing a shift value higher than the SHIFT value
-        Console.WriteLine("\nTesting a guessy a shift of 4.");
+        Console.WriteLine("\nTesting a guess shift of 4.");
         Console.WriteLine(DriverFile.Driver.testHighGuessValue());
 
         // Tests guessing a shift value equal to SHIFT value
-        Console.WriteLine("\nTesting a guess a shift of 3.");
+        Console.WriteLine("\nTesting a guess shift of 3.");
         Console.WriteLine(DriverFile.Driver.testCorrectGuessValue());
 
         // Tests average guess value of DisplayGuessStatistics function
-        Console.WriteLine("\nTesting average guess value of EncryptWord.");
+        Console.WriteLine("\nTesting average guess value of encryptWord.");
         Console.WriteLine("Guessing 2 and 5, average should be 3.");
         Console.WriteLine(DriverFile.Driver.testAverageGuessValue());
 

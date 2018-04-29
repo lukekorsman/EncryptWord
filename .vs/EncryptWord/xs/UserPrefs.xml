@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{3A62D2C9-0ECC-43BF-888F-6924B22792A6}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="EncryptWord/Main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="EncryptWord/EncryptWord.cs">
     <Files>
-      <File FileName="EncryptWord/EncryptWord.cs" Line="172" Column="32" />
-      <File FileName="EncryptWord/Driver.cs" Line="60" Column="38" />
-      <File FileName="EncryptWord/Main.cs" Line="29" Column="71" />
+      <File FileName="EncryptWord/EncryptWord.cs" Line="2" Column="15" />
+      <File FileName="EncryptWord/Driver.cs" Line="91" Column="19" />
+      <File FileName="EncryptWord/Main.cs" Line="15" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />

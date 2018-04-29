@@ -3,7 +3,7 @@
 // DATE: 26Apr2018
 // VERSION: 1
 
-// This file contains functions which test the EncryptWord.cs file. Each 
+// This file contains functions which test the EncryptWord.cs fucntions. Each 
 // will test a different piece of code of the EncryptWord class.
 
 using System;
@@ -37,6 +37,7 @@ namespace DriverFile
         public static string testLessThan4CharInputWord()
         {
             encryption.encryptWord wordLength = new encryptWord();
+
             return wordLength.Encrypt("abc");
         }
 
@@ -44,6 +45,7 @@ namespace DriverFile
         public static string testZeroCharInputWord()
         {
             encryption.encryptWord wordLength = new encryptWord();
+
             return wordLength.Encrypt("");
         }
 
@@ -52,6 +54,7 @@ namespace DriverFile
         public static string testLowGuessValue()
         {
             encryption.encryptWord lowGuess = new encryptWord();
+
             lowGuess.GuessShiftValue(0);
             return lowGuess.DisplayGuessStatistics();
         }
@@ -61,6 +64,7 @@ namespace DriverFile
         public static string testHighGuessValue()
         {
             encryption.encryptWord highGuess = new encryptWord();
+
             highGuess.GuessShiftValue(4);
             return highGuess.DisplayGuessStatistics();
         }
@@ -70,6 +74,7 @@ namespace DriverFile
         public static string testCorrectGuessValue()
         {
             encryption.encryptWord correctGuess = new encryptWord();
+
             correctGuess.GuessShiftValue(3);
             return correctGuess.DisplayGuessStatistics();
         }
@@ -80,6 +85,7 @@ namespace DriverFile
         public static string testAverageGuessValue()
         {
             encryption.encryptWord averageGuess = new encryptWord();
+
             averageGuess.GuessShiftValue(2);
             averageGuess.GuessShiftValue(5);
             return averageGuess.DisplayGuessStatistics();
@@ -92,6 +98,7 @@ namespace DriverFile
         public static string testResetObject()
         {
             encryption.encryptWord resetTest = new encryptWord();
+
             resetTest.GuessShiftValue(0);
             resetTest.GuessShiftValue(3);
             resetTest.GuessShiftValue(5);

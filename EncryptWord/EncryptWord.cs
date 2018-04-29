@@ -1,5 +1,5 @@
 ﻿// AUTHOR: Luke Korsman
-// FILENAME: encryptWord.cs
+// FILENAME: EncryptWord.cs
 // DATE: 14Apr2018
 // VERSION: 1
 //
