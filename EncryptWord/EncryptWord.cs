@@ -2,7 +2,7 @@
 // FILENAME: EncryptWord.cs
 // DATE: 14Apr2018
 // VERSION: 1
-//
+
 // IMPLEMENTATION INVARIANTS: Encrypt function will only encrypt English 
 // alphabetical characters. Initializing an EncryptWord object initially sets 
 // the encryption 'off'. The Encrypt function turns the object 'on' and the decrypt 
