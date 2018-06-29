@@ -68,36 +68,22 @@ namespace encryption
         // Postcondition: EncryptWord object is on.
         public string Encrypt(string originalWord)
         {
-            char letter;                    // Current letter of the buffer array
-            word = originalWord.ToLower();  // set encryptWord word variable to 
-                                            // lowercase inputted word
-            char[] buffer = word.ToCharArray(); // create a character array 
-                                                // based on inputted word
+            int minimumWordLength = 4;      
+            string output = string.Empty;   // String to hold encryption result
 
-            if (word.Length < 4 || word.Length == 0) // Check if word length is 
-                                                     // < 4 characters 
+            // Check if word length is < 4 characters
+            if (originalWord.Length < minimumWordLength)
+
             {
                 return "Error, the word must be 4 characters or longer.";
             }
-            else // originalWord is longer than 4 characters
+            else
             {
-                // Loop through buffer array updating characters based on SHIFT
-                for (int i = 0; i < buffer.Length; i++)
-                {
-                    letter = buffer[i];
-                    letter = (char)(letter + SHIFT);
+                // Encrypt each letter of string using SHIFT
+                foreach (char ch in originalWord)
+                    output += Cipher(ch, SHIFT);
 
-                    if (letter > 'z')
-                    {
-                        letter = (char)(letter - 26);
-                    }
-                    else if (letter < 'a')
-                    {
-                        letter = (char)(letter + 26);
-                    }
-                    buffer[i] = letter; // Update buffer index with new letter
-                }
-                return new string(buffer); // Return encrypted string
+                return output;
             }
         }
 
@@ -176,5 +162,26 @@ namespace encryption
             numberOfLowGuesses = 0;
             sumOfGuesses = 0;
         }
+
+        // Description: Helper function for Encrypt. Takes in a character and 
+        // a shift value, returns the character that is the original character
+        // plus the shift value. If is is the end of the alphabet, then it 
+        // wraps back to the beginning of the alphabet
+        private static char Cipher(char letter, int key) {
+            char upperOrLower;     // Either 'A' or 'a', keeps uppercase letters
+                                   // uppercase and lowercase letters lowercase
+
+            // If letter isn't alphabetical then return the character unmodified
+            if (!char.IsLetter(letter)) {  
+  
+                return letter;  
+            }  
+  
+            // Determine if uppercase or lowercase letter
+            upperOrLower = char.IsUpper(letter) ? 'A' : 'a';
+
+            // Cast the letter plus the key to a new character
+            return (char)((((letter + key) - upperOrLower) % 26) + upperOrLower);  
+        } 
     }
 }

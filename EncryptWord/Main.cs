@@ -69,5 +69,11 @@ class Program
         Console.WriteLine("\nTesting ResetObject function.");
         Console.WriteLine("Guessing 3 shift values, then resetting.");
         Console.WriteLine(DriverFile.Driver.testResetObject());
+
+
+        int result = 123 % 122;
+        char letter = (char)99;
+        Console.WriteLine("27 % 26: " + result);
+        Console.WriteLine("Char is: " + letter);
     }
 }
